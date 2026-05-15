@@ -18,13 +18,17 @@
         </div>
         <div class="text">
           <h2><?= htmlspecialchars($items["app"]) ?></h2>
-          <p><?= htmlspecialchars(substr($items["text"], 0, 23) . "...") ?></p>
+          <p class="notif"><?= htmlspecialchars(substr($items["text"], 0, 23) . "...") ?></p>
+          <div class="mostrarTexto">
+            <p><?= htmlspecialchars($items["mais"]) ?></p>
+          </div>
         </div>
-        <div class="seta">
+        <div class="seta" onclick="mostrarTexto()">
           <img src="./icons/seta-expandir.png" alt="seta">
         </div>
       </div>
     <?php endforeach ?>
   </div>
+  <script src="js/script.js"></script>
 </body>
 </html>

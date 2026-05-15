@@ -6,17 +6,17 @@
 body {
   font-size: 16px;
   font-family: "Arial", Sans-Serif;
-  background: url("../imgs/fundo.jpg") no-repeat;
+  background: url("../imgs/fundo.jpg")no-repeat;
   background-position: center;
   background-size: cover;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
   backdrop-filter: blur(30px);
   -webkit-backdrop-filter: blur(30px);
   display: flex;
   justify-content: center;
   align-items: flex-start;
   padding: 10px;
+  overflow-y: auto;
 }
 .container {
   width: 700px;
@@ -27,12 +27,11 @@ body {
   align-items: center;
   flex-direction: column;
   gap: 10px;
-  overflow-y: scroll;
+  overflow-y: auto;
   padding: 5px;
 }
 .items {
   width: 100%;
-  height: 80px;
   background: linear-gradient(rgb(0,0,0,0.3));
   padding: 20px;
   border-radius: 40px;
@@ -61,6 +60,7 @@ body {
 }
 .text p {
   font-size: 16px;
+  line-height: 1.2;
 }
 .seta {
   width: 20px;
@@ -69,4 +69,11 @@ body {
 .seta img {
   width: 20px;
   height: 20px;
+  cursor: pointer;
+}
+.mostrarTexto {
+  display: none;
+}
+.mostrarTexto.ativo {
+  display: block;
 }
